@@ -23,7 +23,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const mongoUri = process.env.MONGO_URI ;
+const mongoUri = process.env.MONGO_URI;
 
 if (!mongoUri) {
   console.error("Error: MONGO_URI is not defined in the environment variables.");
@@ -37,7 +37,7 @@ mongoose
 
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   origin: '*', 
